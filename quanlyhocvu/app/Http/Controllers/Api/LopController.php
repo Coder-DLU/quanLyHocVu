@@ -11,24 +11,29 @@ class LopController extends Controller
 {
     public function index(Request $request)
     {
-        $token = $request->header('token');
-        $checkTokenIsValid = SessionUser::where('token',$token)->first();
-        if (empty($token)){
-            return response()->json([
-                'code'=> 401,
-                'message'=> 'token khong duoc gui thong qua header',
-            ], 401);
-        }elseif(empty($checkTokenIsValid)){
-            return response()->json([
-                'code'=> 401,
-                'message'=> 'token khong hop le',
-            ], 401);
-        }else{
+//        $token = $request->header('token');
+//        $checkTokenIsValid = SessionUser::where('token',$token)->first();
+//        if (empty($token)){
+//            return response()->json([
+//                'code'=> 401,
+//                'message'=> 'token khong duoc gui thong qua header',
+//            ], 401);
+//        }elseif(empty($checkTokenIsValid)){
+//            return response()->json([
+//                'code'=> 401,
+//                'message'=> 'token khong hop le',
+//            ], 401);
+//        }else{
+//            $Lop = Lop::all();
+//            return response()->json([
+//                'code'=> 200,
+//                'data'=> $Lop
+//            ], 200);
+//        }
             $Lop = Lop::all();
             return response()->json([
                 'code'=> 200,
                 'data'=> $Lop
             ], 200);
-        }
     }
 }
