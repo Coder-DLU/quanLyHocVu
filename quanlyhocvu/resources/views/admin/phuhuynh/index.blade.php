@@ -21,8 +21,8 @@
             <div class="container-fluid">
                 <dvi class="row mb-3 pt-3">
                     <div class="col-4">
-                        <a type="button" class="btn btn-success"><i class="fa fa-table" aria-hidden="true"></i>
-                            Import</a>
+{{--                        <a type="button" class="btn btn-success"><i class="fa fa-table" aria-hidden="true"></i>--}}
+{{--                            Import</a>--}}
                         <a href="{{route('phuhuynh.create')}}" type="button" class="btn btn-success"><i
                                 class="fa fa-plus-square" aria-hidden="true"></i>
                             Add</a>
@@ -33,11 +33,11 @@
 
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Danh sách phụ huynh</h3>
+                            <div class="card-header row">
+                                <h3 class="card-title col-4">Danh sách phụ huynh</h3>
 
-                                <div class="card-tools">
-                                    <div class="input-group input-group-sm" style="width: 500px;">
+                                <div class="card-tools col-8">
+                                    <div class="input-group input-group-sm">
                                         <input type="text" name="table_search" class="form-control float-right"
                                                placeholder="Search">
 

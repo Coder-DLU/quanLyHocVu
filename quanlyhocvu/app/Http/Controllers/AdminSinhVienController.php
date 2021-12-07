@@ -111,13 +111,31 @@ class AdminSinhVienController extends Controller
     {
         try {
             DB::beginTransaction();
-            Excel::import(new SinhVienImport, $request->file);
+//            Excel::import(new SinhVienImport, $request->file);
+
             DB::commit();
 
-            return redirect()->back()->withStatus('Import successfully');
+            return redirect()->back()->with('message', 'Import Successfully !!');
         } catch (\Exception $exception) {
-            Log::error('Message' . $exception->getMessage() . ' ------Line ' . $exception->getLine());
+            Log::error('Message: ' . $exception->getMessage() . ' ------Line ' . $exception->getLine());
             DB::rollBack();
+            return redirect()->back()->with('message', 'Message: ' . $exception->getMessage());
         }
+    }
+
+    public function theolop($malop)
+    {
+        $lop = $this->lop->where('malop', $malop)->get();
+        $lsinhvien = array();
+        foreach ($lop[0]->sinhvien as $sv) {
+            $lsinhvien[] = $sv;
+        }
+
+        if (count($lsinhvien) != 0) {
+            $tenlop = $malop;
+            return view('admin.sinhvien.index', compact('lsinhvien', 'tenlop'));
+        }
+
+        return view('admin.sinhvien.index', compact('lsinhvien'));
     }
 }

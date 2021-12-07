@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Illuminate\Support\Facades\Hash;
+
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -16,7 +19,6 @@ class AdminController extends Controller
 
     public function postloginAdmin(Request $request)
     {
-//        dd($request->all());
         $remember = $request->has('remember_me') ? true : false;
 
         if (auth()->attempt([
@@ -36,18 +38,18 @@ class AdminController extends Controller
         return view('login');
     }
 
-    public function registerAdmin()
-    {
-        return view('register');
-    }
-
-    public function postregisterAdmin(Request $request){
-        $user = new User();
-        $user->password = Hash::make($request->password);
-        $user->email = $request->email;
-        $user->name = $request->name;
-        $user->save();
-
-        return view('login');
-    }
+//    public function registerAdmin()
+//    {
+//        return view('register');
+//    }
+//
+//    public function postregisterAdmin(Request $request){
+//        $user = new User();
+//        $user->password = Hash::make($request->password);
+//        $user->email = $request->email;
+//        $user->name = $request->name;
+//        $user->save();
+//
+//        return view('login');
+//    }
 }

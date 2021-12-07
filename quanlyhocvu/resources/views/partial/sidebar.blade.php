@@ -42,6 +42,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('giaovien.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Giáo viên
+                        </p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{route('phuhuynh.index')}}" class="nav-link">
@@ -61,10 +69,26 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('dangkyhocphan.index')}}" class="nav-link">
+                    <a href="{{route('lophocphan.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
-                            Đăng ký học phần
+                            Lớp học phần
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('hocphan.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Học phần
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('chitietlophocphan.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Chi tiết lớp học phần
                         </p>
                     </a>
                 </li>

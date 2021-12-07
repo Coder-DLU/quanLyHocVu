@@ -1,1 +1,0 @@
-INSERT INTO `session_users`(`id`, `token`, `refresh_token`, `token_expried`, `refresh_token_expried`, `user_id`, `created_at`, `updated_at`) VALUES (1, 'ufRBurw3CczgrF6WthUa0PXJTZiEbKj43DivQKci', 'LnhQCz1xaMysmSVg7DZVrOYD2elKBlJZVN191iiQ', '2021-12-14 05:16:20', '2022-11-09 05:16:20', 2, '2021-11-13 22:16:20', '2021-11-13 22:16:20');
