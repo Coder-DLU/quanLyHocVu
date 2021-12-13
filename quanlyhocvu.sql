@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th12 07, 2021 lúc 03:37 PM
--- Phiên bản máy phục vụ: 10.4.14-MariaDB
--- Phiên bản PHP: 7.2.34
+-- Host: 127.0.0.1
+-- Generation Time: Dec 07, 2021 at 08:04 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `quanlyhocvu`
+-- Database: `quanlyhocvu`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chi_tiet_lop_hoc_phans`
+-- Table structure for table `chi_tiet_lop_hoc_phans`
 --
 
 CREATE TABLE `chi_tiet_lop_hoc_phans` (
@@ -45,7 +45,7 @@ CREATE TABLE `chi_tiet_lop_hoc_phans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chi_tiet_lop_hoc_phans`
+-- Dumping data for table `chi_tiet_lop_hoc_phans`
 --
 
 INSERT INTO `chi_tiet_lop_hoc_phans` (`id`, `malhp`, `masv`, `mahp`, `ngaydk`, `diemqt`, `phantramqt`, `dieml1`, `phantraml1`, `dieml2`, `phantraml2`, `diemtk`, `created_at`, `updated_at`) VALUES
@@ -118,7 +118,7 @@ INSERT INTO `chi_tiet_lop_hoc_phans` (`id`, `malhp`, `masv`, `mahp`, `ngaydk`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -133,7 +133,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `giao_viens`
+-- Table structure for table `giao_viens`
 --
 
 CREATE TABLE `giao_viens` (
@@ -147,17 +147,10 @@ CREATE TABLE `giao_viens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `giao_viens`
---
-
-INSERT INTO `giao_viens` (`id`, `tengv`, `sodt`, `email`, `facebook`, `makhoa`, `created_at`, `updated_at`) VALUES
-(1, 'Vũ Minh Quan', '0842415839', 'quanmv@dlu.edu.vn', 'https://www.facebook.com/vuminquan', '1', '2021-12-07 01:03:36', '2021-12-07 01:03:36');
-
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoc_phans`
+-- Table structure for table `hoc_phans`
 --
 
 CREATE TABLE `hoc_phans` (
@@ -174,7 +167,7 @@ CREATE TABLE `hoc_phans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoc_phans`
+-- Dumping data for table `hoc_phans`
 --
 
 INSERT INTO `hoc_phans` (`mahp`, `tenhp`, `loai`, `stc`, `sotclt`, `sotcth`, `dongialt`, `dongiath`, `created_at`, `updated_at`) VALUES
@@ -185,7 +178,7 @@ INSERT INTO `hoc_phans` (`mahp`, `tenhp`, `loai`, `stc`, `sotclt`, `sotcth`, `do
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khoas`
+-- Table structure for table `khoas`
 --
 
 CREATE TABLE `khoas` (
@@ -196,7 +189,7 @@ CREATE TABLE `khoas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `khoas`
+-- Dumping data for table `khoas`
 --
 
 INSERT INTO `khoas` (`id`, `tenkhoa`, `created_at`, `updated_at`) VALUES
@@ -205,7 +198,7 @@ INSERT INTO `khoas` (`id`, `tenkhoa`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lops`
+-- Table structure for table `lops`
 --
 
 CREATE TABLE `lops` (
@@ -219,7 +212,7 @@ CREATE TABLE `lops` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lops`
+-- Dumping data for table `lops`
 --
 
 INSERT INTO `lops` (`malop`, `makhoa`, `magvcn`, `siso`, `nienkhoa`, `created_at`, `updated_at`) VALUES
@@ -232,7 +225,7 @@ INSERT INTO `lops` (`malop`, `makhoa`, `magvcn`, `siso`, `nienkhoa`, `created_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lop_hoc_phans`
+-- Table structure for table `lop_hoc_phans`
 --
 
 CREATE TABLE `lop_hoc_phans` (
@@ -244,7 +237,7 @@ CREATE TABLE `lop_hoc_phans` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lop_hoc_phans`
+-- Dumping data for table `lop_hoc_phans`
 --
 
 INSERT INTO `lop_hoc_phans` (`malhp`, `namhoc`, `hocky`, `created_at`, `updated_at`) VALUES
@@ -256,7 +249,7 @@ INSERT INTO `lop_hoc_phans` (`malhp`, `namhoc`, `hocky`, `created_at`, `updated_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -266,7 +259,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -288,7 +281,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -300,7 +293,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `phu_huynhs`
+-- Table structure for table `phu_huynhs`
 --
 
 CREATE TABLE `phu_huynhs` (
@@ -313,17 +306,10 @@ CREATE TABLE `phu_huynhs` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `phu_huynhs`
---
-
-INSERT INTO `phu_huynhs` (`id`, `tenph`, `sodt`, `matkhau`, `diachi`, `created_at`, `updated_at`) VALUES
-(1, 'Lê A', '0842415839', '$2y$10$x3DpiqzTE2E1JN0zVNtWCufCmPktiAyhTsIjj7iBUd48gpN4E9Tr6', '5/7 Trần Khánh Dư P8 TP Đà Lạt', '2021-12-07 01:35:15', '2021-12-07 01:35:15');
-
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quanhe_sv_phs`
+-- Table structure for table `quanhe_sv_phs`
 --
 
 CREATE TABLE `quanhe_sv_phs` (
@@ -336,7 +322,7 @@ CREATE TABLE `quanhe_sv_phs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sinhvien_lops`
+-- Table structure for table `sinhvien_lops`
 --
 
 CREATE TABLE `sinhvien_lops` (
@@ -348,7 +334,7 @@ CREATE TABLE `sinhvien_lops` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sinhvien_lops`
+-- Dumping data for table `sinhvien_lops`
 --
 
 INSERT INTO `sinhvien_lops` (`id`, `masv`, `malop`, `created_at`, `updated_at`) VALUES
@@ -484,7 +470,7 @@ INSERT INTO `sinhvien_lops` (`id`, `masv`, `malop`, `created_at`, `updated_at`) 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sinh_viens`
+-- Table structure for table `sinh_viens`
 --
 
 CREATE TABLE `sinh_viens` (
@@ -500,7 +486,7 @@ CREATE TABLE `sinh_viens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sinh_viens`
+-- Dumping data for table `sinh_viens`
 --
 
 INSERT INTO `sinh_viens` (`masv`, `tensv`, `ngaysinh`, `maph1`, `maph2`, `created_at`, `updated_at`, `quanheph1`, `quanheph2`) VALUES
@@ -572,7 +558,7 @@ INSERT INTO `sinh_viens` (`masv`, `tensv`, `ngaysinh`, `maph1`, `maph2`, `create
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -587,149 +573,149 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Linh', 'khanhlinh1475@gmail.com', NULL, '$2y$10$ScwQ5Wyxfn8sC.tEZPxSAORu9cN9vAMAZnuGkogNZtpx8BBs0VyLu', NULL, NULL, NULL);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chi_tiet_lop_hoc_phans`
+-- Indexes for table `chi_tiet_lop_hoc_phans`
 --
 ALTER TABLE `chi_tiet_lop_hoc_phans`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `giao_viens`
+-- Indexes for table `giao_viens`
 --
 ALTER TABLE `giao_viens`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `hoc_phans`
+-- Indexes for table `hoc_phans`
 --
 ALTER TABLE `hoc_phans`
   ADD PRIMARY KEY (`mahp`);
 
 --
--- Chỉ mục cho bảng `khoas`
+-- Indexes for table `khoas`
 --
 ALTER TABLE `khoas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `lops`
+-- Indexes for table `lops`
 --
 ALTER TABLE `lops`
   ADD PRIMARY KEY (`malop`);
 
 --
--- Chỉ mục cho bảng `lop_hoc_phans`
+-- Indexes for table `lop_hoc_phans`
 --
 ALTER TABLE `lop_hoc_phans`
   ADD PRIMARY KEY (`malhp`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Chỉ mục cho bảng `phu_huynhs`
+-- Indexes for table `phu_huynhs`
 --
 ALTER TABLE `phu_huynhs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `quanhe_sv_phs`
+-- Indexes for table `quanhe_sv_phs`
 --
 ALTER TABLE `quanhe_sv_phs`
   ADD PRIMARY KEY (`maquanhe`);
 
 --
--- Chỉ mục cho bảng `sinhvien_lops`
+-- Indexes for table `sinhvien_lops`
 --
 ALTER TABLE `sinhvien_lops`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `sinh_viens`
+-- Indexes for table `sinh_viens`
 --
 ALTER TABLE `sinh_viens`
   ADD PRIMARY KEY (`masv`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `chi_tiet_lop_hoc_phans`
+-- AUTO_INCREMENT for table `chi_tiet_lop_hoc_phans`
 --
 ALTER TABLE `chi_tiet_lop_hoc_phans`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
--- AUTO_INCREMENT cho bảng `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `giao_viens`
+-- AUTO_INCREMENT for table `giao_viens`
 --
 ALTER TABLE `giao_viens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `khoas`
+-- AUTO_INCREMENT for table `khoas`
 --
 ALTER TABLE `khoas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
--- AUTO_INCREMENT cho bảng `phu_huynhs`
+-- AUTO_INCREMENT for table `phu_huynhs`
 --
 ALTER TABLE `phu_huynhs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `sinhvien_lops`
+-- AUTO_INCREMENT for table `sinhvien_lops`
 --
 ALTER TABLE `sinhvien_lops`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
